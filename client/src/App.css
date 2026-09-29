@@ -1,184 +1,122 @@
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
-
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
+#root {
+  min-height: 100vh;
 }
 
-.hero {
-  position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
+.app {
+  min-height: 100vh;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  text-align: center;
+  background-image: url("./assets/background2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#center {
+/* Main title */
+.app h1 {
+  margin: 0;
+  font-size: 42px;
+  color: #fff;
+}
+
+/* Text underneath Welcome */
+.subtitle {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-size: px;
+  color: #ffffff;
+}
+
+/* The two boxes */
+.forms {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Individual Sign Up / Login boxes */
+.form-container {
+  width: 350px;
+  padding: 30px;
+  background: white;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(244, 240, 240, 0.441);
+  box-sizing: border-box;
+}
+
+/* Sign Up / Login heading */
+.form-container h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #222;
+}
+
+/* Form layout */
+.form-container form {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
+  gap: 15px;
 }
 
-#next-steps {
+/* Labels */
+.form-container label {
   display: flex;
-  border-top: 1px solid var(--border);
+  flex-direction: column;
+  gap: 6px;
   text-align: left;
-
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
+  font-weight: 500;
+  color: #333;
 }
 
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-}
-
-#next-steps ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
-}
-
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
-}
-
-.ticks {
-  position: relative;
+/* Text boxes */
+.form-container input {
   width: 100%;
+  padding: 10px;
+  border: 1px solid #7b5353;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
+/* When you click inside an input */
+.form-container input:focus {
+  outline: none;
+  border-color: #48636c5c;
+  box-shadow: 0 0 0 2px rgba(177, 206, 204, 0.15);
+}
+
+/* Buttons */
+.form-container button {
+  margin-top: 10px;
+  padding: 11px;
+  border: none;
+  border-radius: 6px;
+  background: rgb(65, 79, 124);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Button when mouse is over it */
+.form-container button:hover {
+  background:rgb(34, 48, 67);
+}
+
+/* Make the cards stack on smaller screens */
+@media (max-width: 750px) {
+  .forms {
+    flex-direction: column;
+    align-items: center;
   }
 
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
-  }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
+  .form-container {
+    width: 100%;
+    max-width: 400px;
   }
 }
