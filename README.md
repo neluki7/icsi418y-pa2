@@ -25,7 +25,7 @@ The application allows users to:
 - MongoDB
 - MongoDB Atlas
 - CSS
-- 
+
 ## How to Run
 
 ### Start the Backend
